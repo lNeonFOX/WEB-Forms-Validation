@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Part 2 - Bootstrap Forms</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <main class="container py-4">
+    <a href="index.html">Back to index</a>
+    <h1 class="h3 my-3">Part 2. Bootstrap Forms</h1>
+
+    <section class="card mb-5">
+      <div class="card-body">
+        <h2 class="h5 mb-3">Task 2. Bootstrap Form Styling</h2>
+        <form action="#" method="post">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name2" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name2" placeholder="Your full name">
+            </div>
+            <div class="col-md-6">
+              <label for="email2" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email2" placeholder="name@example.com" aria-describedby="emailHelp2">
+              <div id="emailHelp2" class="form-text">We will never share your email.</div>
+            </div>
+            <div class="col-12">
+              <label for="message2" class="form-label">Message</label>
+              <textarea class="form-control" id="message2" rows="4" placeholder="Write your message here"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="card mb-5">
+      <div class="card-body">
+        <h2 class="h5 mb-3">Task 3. Bootstrap Validation Styles</h2>
+        <p class="text-muted">
+          Valid and invalid states are written directly in the HTML: the Name field shows the
+          valid state, the Email field shows the invalid state. Real checking is done by the browser
+          when you press Submit.
+        </p>
+        <form action="#" method="post">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name3" class="form-label">Name</label>
+              <input type="text" class="form-control is-valid" id="name3" value="Torekhan Taimas" required minlength="2">
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-6">
+              <label for="email3" class="form-label">Email</label>
+              <input type="email" class="form-control is-invalid" id="email3" value="not-an-email" required>
+              <div class="invalid-feedback">Email is required and must be valid.</div>
+            </div>
+            <div class="col-12">
+              <label for="message3" class="form-label">Message</label>
+              <textarea class="form-control is-invalid" id="message3" rows="4" placeholder="At least 10 characters" required minlength="10"></textarea>
+              <div class="invalid-feedback">Message is required (at least 10 characters).</div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
